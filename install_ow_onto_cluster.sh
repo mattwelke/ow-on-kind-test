@@ -15,6 +15,7 @@ helm repo add openwhisk https://openwhisk.apache.org/charts
 helm repo update
 helm install owdev openwhisk/openwhisk -n openwhisk --create-namespace -f $OW_YAML
 
-echo "OpenWhisk install into kind cluster started. Waiting 2 minutes for all pods to be Completed or Running..."
-sleep 120
+# Testing showed around 5m20s for all OpenWhisk pods to be Completed or Running.
+echo "OpenWhisk install into kind cluster started. Waiting 6 minutes for all pods to be Completed or Running..."
+sleep 360
 echo "Finished waiting."
